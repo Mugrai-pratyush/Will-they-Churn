@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Will They Churn?</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Will They Churn?</h1>
+        <img src="static/logo.png" alt="Logo">
+    </div>
+
+    <div class="form-wrapper">
+        <form action="/predict" method="post">
+            <label>Gender:</label>
+            <select name="gender">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Rather not say</option>
+            </select><br>
+
+            <label>Senior Citizen:</label>
+            <select name="SeniorCitizen">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select><br>
+
+            <label>Partner:</label>
+            <select name="Partner">
+                <option>Yes</option>
+                <option>No</option>
+            </select><br>
+
+            <label>Dependents:</label>
+            <select name="Dependents">
+                <option>Yes</option>
+                <option>No</option>
+            </select><br>
+
+            <label>Monthly Charges:</label>
+            <input type="number" name="MonthlyCharges" step="0.01"><br>
+
+            <label>Total Charges:</label>
+            <input type="number" name="TotalCharges" step="0.01"><br>
+
+            <label>Contract Type:</label>
+            <select name="Contract">
+                <option>Month-to-month</option>
+                <option>One year</option>
+                <option>Two year</option>
+            </select><br>
+
+            <label>Payment Method:</label>
+            <select name="PaymentMethod">
+                <option>Electronic check</option>
+                <option>Mailed check</option>
+                <option>Bank transfer (automatic)</option>
+                <option>Credit card (automatic)</option>
+            </select><br>
+
+            <input type="submit" value="Predict Churn">
+        </form>
+    </div>
+</body>
+</html>
