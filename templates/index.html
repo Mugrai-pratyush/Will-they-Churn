@@ -61,6 +61,18 @@
 
             <input type="submit" value="Predict Churn">
         </form>
+
+        {% if prediction %}
+        <div class="result">
+            <h2>Prediction: 
+                {% if prediction == "Yes" %}
+                    🚨 Customer is likely to churn
+                {% else %}
+                    ✅ Customer is likely to stay
+                {% endif %}
+            </h2>
+        </div>
+        {% endif %}
     </div>
 </body>
 </html>
